@@ -1,0 +1,28 @@
+  .img_cont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .imgupload{
+      width: 100px;
+      height: 100px;
+      cursor: pointer;
+    }
+    .have_img_show{
+      width: 100px;
+      height: 100px;
+      cursor: pointer;
+      position: relative;
+      .imgflag{
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: none;
+      }
+      &:hover{
+        background-color: rgba(0,0,0,0.28);
+        .imgflag{
+          display: block;
+        }
+      }
+    }
+  }

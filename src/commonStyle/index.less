@@ -1,0 +1,33 @@
+@theme-color: #1890ff;
+@keyframes fade-in{
+  0% {opacity: 0;}/*初始状态 透明度为0*/  
+  40% {opacity: 0;}/*过渡状态 透明度为0*/  
+  100% {opacity: 1;}/*结束状态 透明度为1*/  
+}
+//设定常量
+@pTor:96;
+
+// 公共样式函数
+@root: {
+    // height: calc( 100% - 50px );
+    border-radius: 2px;
+    border: 1px solid rgba(228,215,253, 0.1);
+    padding: 24px;
+}
+@root_main: {
+  margin-top: 16px;  
+}
+@root_pagesize: {
+  margin-top: 16px;
+  text-align: right;
+}
+@root_search: {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  .search_header{
+    // display: flex;
+    // flex-direction: column;
+    // width: 200px;
+  }
+}

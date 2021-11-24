@@ -1,0 +1,120 @@
+.root{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  .dialog_mask{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.45);
+  }
+  .dialog_wrap{
+    position: relative;
+    top: 100px;
+    margin: 0 auto;
+    text-align: center;
+    .dialog_content{
+      text-align: left;
+      display: inline-block;
+      min-width: 540px;
+      min-height: 200px;
+      max-width: 700px;
+      background-color: #fff;
+      border-radius: 2px;
+      box-shadow: 0 3px 6px -4px rgb(0 0 0 / 12%), 0 6px 16px 0 rgb(0 0 0 / 8%), 0 9px 28px 8px rgb(0 0 0 / 5%);
+      pointer-events: auto;
+      .dialog_header{
+        padding: 16px 24px;
+        display: flex;
+        font-size: 16px;
+        font-weight: 500;
+        color: rgba(0,0,0,.85);
+        justify-content: space-between;
+        border-bottom: 1px solid #f0f0f0;
+        border-radius: 2px 2px 0 0;
+      }
+      .dialog_body{
+        padding: 24px;
+      }
+      .dialog_footer{
+        user-select: none;
+        padding: 10px 16px;
+        text-align: right;
+        border-top: 1px solid #f0f0f0;
+        border-radius: 0 0 2px 2px;
+        .dialog_btn{
+          padding: 4px 15px;
+          font-size: 14px;
+          border-radius: 2px;
+          color: rgba(0,0,0,.85);
+          background: #fff;
+          border: 1px solid #d9d9d9;
+          cursor: pointer;
+        }
+        .dialog_btn_primary{
+          color: #fff;
+          background: #1890ff;
+          border-color: #1890ff;
+          text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+          box-shadow: 0 2px 0 rgb(0 0 0 / 5%);
+        }
+        .dialog_btn + .dialog_btn{
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}
+.modal_root_showing{
+  animation: show 0.4s forwards;
+}
+.modal_root_fading{
+  animation: fade 0.4s forwards;
+}
+.dialog_mask_show{
+  animation: d_show 0.4s forwards;
+}
+.dialog_mask_fade{
+  animation: d_fade 0.4s forwards;
+}
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes fade {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+@keyframes d_show{
+  form {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes d_fade{
+  form {
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
+}

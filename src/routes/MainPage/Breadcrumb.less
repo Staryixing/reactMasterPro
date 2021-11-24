@@ -1,0 +1,32 @@
+.bread_root{
+  height: 96px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .bread_nav{
+    display: flex;
+    align-items: center;
+  }
+  .bread_root_title{
+    font-size: 20px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.85);
+    padding-left: 6px;
+    padding-top: 14px;
+  } 
+  .bread_item{
+    font-size: 14px;
+    &:not(:last-child){
+      color: #00000073;
+      cursor: pointer;
+    }
+    &:last-child .bread_line{
+      display: none;
+    }
+  }
+  .bread_title{
+    padding: 6px;
+  }
+}

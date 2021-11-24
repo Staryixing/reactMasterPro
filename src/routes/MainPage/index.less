@@ -1,0 +1,130 @@
+@import "../../commonStyle/index.less";
+
+.root {
+  height: 100vh;
+  width: 100vw;
+  overflow-y: hidden;
+  display: flex;
+  .aside {
+    height: 100%;
+    .header {
+      background: #002140;   
+      height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      font-family: PingFangSC-Medium, PingFang SC;
+      font-weight: 500;
+      color: #FFFFFF;
+    }
+    background: #001529;
+    width: 260px;
+    color: rgba(255, 255, 255, 0.65);
+  }
+  .main {
+    flex: 1;
+    overflow: auto;
+    background-color: #e9e9e9;
+    .main_root {
+      .main_root_header{
+        display: flex;
+        height: 64px;
+        background-color: #fff;
+        border-bottom: 1px solid rgba(0, 21, 41, 0.12);
+        justify-content: flex-end;
+        align-items: center;
+        .image{
+            margin-right: 10px;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: #D4D7D9;
+            border-radius: 50%;
+        }
+        .main_root_user{
+          display: flex;
+
+          margin-right: 60px;
+        }
+      }
+      .main_root_nav {
+        height: 96px;
+        background-color: #fff;
+      }
+      .main_root_cont {
+        margin: 20px;
+        background: #fff;
+        // padding: 20px;
+        height: 100%;
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
+
+.menu_item{
+  height: 40px;
+  line-height: 40px;
+  padding-left: 20px;
+  cursor: pointer;
+  &:hover{
+    color: #fff;
+  }
+}
+.menu_item_active {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 20px;
+  background: #1890ff;
+}
+.menu_sub_title{
+  padding-left: 20px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.65);
+  &:hover{
+    color: #fff;
+  }
+}
+.menu_sub_active{
+  max-height: 500px;
+  animation: show 1s;
+}
+.menu_sub_hidden {
+  max-height: 0px;
+}
+.menu_sub{
+  overflow: hidden;
+  background: #000C17;
+}
+.menu_sub_item_active{
+  height: 40px;
+  line-height: 40px;
+  padding-left: 20px;
+  background: #1890ff;
+}
+.menu_sub_item{
+  height: 40px;
+  line-height: 40px;
+  padding-left: 20px;
+  cursor: pointer;
+  &:hover{
+    color: #fff;
+  }
+}
+
+
+
+@keyframes show {
+  0% {
+    max-height: 0px;
+  }
+  100% {
+    max-height: 500px;
+  }
+}

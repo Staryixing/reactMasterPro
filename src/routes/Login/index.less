@@ -1,0 +1,53 @@
+.root{
+  height: 100%;
+  width: 100%;
+  background: #11214C url('../../assets/loginbg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  .main{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      .login_logo{
+        width: 140px;
+        height: 100px;
+        margin-top: 22px;
+        margin-left: 22px;
+      }
+      .loginForm{
+        display: flex;
+        flex: 1;
+        align-items: center;
+        .form_cont{
+          margin: 100px auto;
+          .login_btn{
+            font-size: 30px;
+            font-family: Lantinghei SC;
+            font-weight: 200;
+            color: #FCFCFE;
+            height: 30px;
+            background-color: #C66C7F;
+          }
+        }
+      }
+      .logo{
+        width: 100%;
+        text-align: center;
+        color:#FEFFFE;
+        margin-bottom: 32px;
+      }
+      .title{
+          font-size: 38px;
+          font-family: Lantinghei SC;
+          font-weight: 600;
+          color: #FCFCFE;
+          line-height:28px;
+          margin-bottom: 40px;
+      }
+  }
+  :global(.ant-input){
+    font-size: 20px;
+  }
+}

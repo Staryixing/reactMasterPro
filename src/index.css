@@ -1,0 +1,150 @@
+@import "~antd/dist/antd.css";
+*{
+  padding: 0;
+  margin: 0
+}
+body,
+ul,
+li,
+main,
+header,
+article,
+aside,
+section {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#root{
+  height: 100%;
+}
+.oper_btn{
+    color: #1890FF;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    margin-right: 8px;
+    cursor: pointer;
+}
+.before_star label::before{
+  content: '*';
+  color: red;
+  position: relative;
+  left: -4px;
+}
+.manualone-showing {
+    animation: show 0.5s forwards;
+}
+.manualone-fading {
+    animation: fade 0.5s forwards;
+}
+@keyframes show {
+    from {
+        transform: translateX(10%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes fade {
+    from {
+        transform: translateX(0);;
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-10%);
+        opacity: 0;
+    }
+}
+.left-showing{
+  animation: leftshow 0.5s forwards;
+}
+.left-fading{
+  animation: leftfade 0.5s forwards;
+}
+@keyframes leftshow {
+    from {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes leftfade {
+    from {
+        transform: translateX(0);;
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+}
+.right-showing{
+  animation: rightshow 0.5s forwards;
+}
+.right-fading{
+  animation: rightfade 0.5s forwards;
+}
+@keyframes rightshow {
+    from {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes rightfade {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+}
+
+
+.demostyle{
+  border: 1px solid red;
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 500ms;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 500ms;
+}
